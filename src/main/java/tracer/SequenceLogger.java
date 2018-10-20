@@ -20,10 +20,10 @@ public class SequenceLogger implements LoginListener, CursorSelectListener
     private Database database;
     private UserModel userModel;
 
-    private View view;
     private LoginController login;
-
     private CursorSelectController cursorSelector;
+
+
 
     public SequenceLogger()
     {
