@@ -1,11 +1,13 @@
-package tracer.cursor;
+package tracer.cursor.view;
+
+import tracer.cursor.interfaces.CursorSelectListener;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-public class MouseTypeView {
+public class CursorSelectView {
     private JPanel panelMain;
     private JRadioButton mouseRadioButton;
     private JRadioButton trackpadRadioButton;
@@ -14,19 +16,19 @@ public class MouseTypeView {
     boolean mouseSelected = true;
     boolean trackpadSelected = false;
 
-    private ArrayList<MouseTypeViewListener> listeners;
+    private ArrayList<CursorSelectListener> listeners;
 
     public JPanel getPanel() {
         return panelMain;
     }
 
-    public void addListener(MouseTypeViewListener listener) {
+    public void addListener(CursorSelectListener listener) {
         listeners.add(listener);
     }
 
-    public MouseTypeView() {
+    public CursorSelectView() {
 
-        listeners = new ArrayList<MouseTypeViewListener>();
+        listeners = new ArrayList<CursorSelectListener>();
 
         mouseRadioButton.setSelected(true);
 
@@ -36,8 +38,8 @@ public class MouseTypeView {
 
                 String mouseType = mouseSelected ? "mouse" : trackpadSelected ? "trackpad" : "error";
 
-                for (MouseTypeViewListener listener : listeners) {
-                    listener.mouseTypeSelected(mouseType);
+                for (CursorSelectListener listener : listeners) {
+                    listener.cursorTypeSelected(mouseType);
                 }
 
             }

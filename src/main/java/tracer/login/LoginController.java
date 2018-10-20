@@ -16,8 +16,6 @@ public class LoginController implements LoginViewListener, RegisterViewListener,
 {
 
     private String username;                // which user to track
-    private String mouseType;               // mouse or trackpad
-    private Float pollRate;                 // seconds between polls
 
     private View view;                      // controls visual components
     private UserModel model;                // stores information

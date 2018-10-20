@@ -1,7 +1,5 @@
 package tracer.login.view;
 
-import tracer.cursor.MouseTypeView;
-
 import javax.swing.*;
 import java.awt.*;
 
@@ -15,9 +13,9 @@ public class View {
 
     public View() {
 
-        // TODO: this is a test
-        frame = new JFrame("Mouse Logger 1.0");
+        frame = new JFrame("OTL - Login");
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setResizable(false);
         frame.setLocationRelativeTo(null);
 
         loginView = new LoginView();

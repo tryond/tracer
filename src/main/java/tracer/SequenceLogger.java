@@ -1,5 +1,7 @@
 package tracer;
 
+import tracer.cursor.CursorSelectController;
+import tracer.cursor.interfaces.CursorSelectListener;
 import tracer.database.UserTable;
 import tracer.database.Database;
 import tracer.database.ElephantDatabase;
@@ -10,10 +12,8 @@ import tracer.login.view.View;
 
 import javax.swing.*;
 
-public class SequenceLogger implements LoginListener
+public class SequenceLogger implements LoginListener, CursorSelectListener
 {
-
-
     private String username;
     private String cursor_type;
 
@@ -23,7 +23,7 @@ public class SequenceLogger implements LoginListener
     private View view;
     private LoginController login;
 
-    private JFrame frame;
+    private CursorSelectController cursorSelector;
 
     public SequenceLogger()
     {
@@ -45,7 +45,8 @@ public class SequenceLogger implements LoginListener
 
         // Cursor selector for use with selecting a valid cursor type
         // TODO: import cursor selector
-        // CursorSelector cursorSelector = new CursorSelector();
+         cursorSelector = new CursorSelectController();
+         cursorSelector.addListener(this);
 
         // Trace table within database for use with trace logging
         // TODO: create trace model
@@ -56,28 +57,28 @@ public class SequenceLogger implements LoginListener
     }
 
 
+
+
     public void go()
     {
-
-        // 1. Login / Register username
         login.go();
-
-        // 2. Get cursor type
-
-        // 3. Start sequence tracking
-
-        // 4. Format sequence
-
-        // 5. Send to database
-
-        // 6. Display results
-
-        // 7. Reset to step 3
-
     }
 
     public void userLoggedIn(String username)
     {
-        System.out.println("Sequence Logger: " + "User Logged In: " + username);
+        this.username = username;
+
+        System.out.println("Sequence Logger: " + "User Logged In: " + this.username);
+
+        cursorSelector.go();
+    }
+
+    public void cursorTypeSelected(String cursor_type)
+    {
+        this.cursor_type = cursor_type;
+
+        System.out.println("Sequence Logger: " + "Cursor Type Selected: " + this.cursor_type);
+
+        // Start sequence tracker
     }
 }

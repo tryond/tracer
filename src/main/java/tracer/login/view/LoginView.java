@@ -32,7 +32,7 @@ public class LoginView {
 
         // Attempt Login
         buttonLogin.addActionListener(new ActionListener() {
-            @Override
+
             public void actionPerformed(ActionEvent e) {
 
                 for (LoginViewListener listener : listeners) {
