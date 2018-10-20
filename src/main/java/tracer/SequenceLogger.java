@@ -4,8 +4,13 @@ import tracer.database.UserTable;
 import tracer.database.Database;
 import tracer.database.ElephantDatabase;
 import tracer.database.interfaces.UserModel;
+import tracer.login.LoginController;
+import tracer.login.interfaces.LoginListener;
+import tracer.login.view.View;
 
-public class SequenceLogger
+import javax.swing.*;
+
+public class SequenceLogger implements LoginListener
 {
 
 
@@ -15,6 +20,10 @@ public class SequenceLogger
     private Database database;
     private UserModel userModel;
 
+    private View view;
+    private LoginController login;
+
+    private JFrame frame;
 
     public SequenceLogger()
     {
@@ -26,7 +35,13 @@ public class SequenceLogger
 
         // Login controller for use with acquiring valid username
         // TODO: import login controller
-        // LoginController login = new LoginController(userModel);
+
+
+        view = new View();
+        login = new LoginController(userModel, view);
+
+        login.addListener(this);
+
 
         // Cursor selector for use with selecting a valid cursor type
         // TODO: import cursor selector
@@ -45,6 +60,7 @@ public class SequenceLogger
     {
 
         // 1. Login / Register username
+        login.go();
 
         // 2. Get cursor type
 
@@ -60,20 +76,8 @@ public class SequenceLogger
 
     }
 
-    public void loggedIn(String username)
+    public void userLoggedIn(String username)
     {
-
+        System.out.println("Sequence Logger: " + "User Logged In: " + username);
     }
-
-    public void cursorTypeSelected(String cursor_type)
-    {
-
-    }
-
-
-    public void sequenceOver()
-    {
-
-    }
-
 }
