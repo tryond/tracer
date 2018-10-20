@@ -22,11 +22,12 @@ public class LoginController implements LoginViewListener, RegisterViewListener,
 
     private ArrayList<LoginListener> listeners;
 
-    public LoginController(UserModel model, View view)
+    public LoginController(UserModel model)
     {
 
         this.model = model;
-        this.view = view;
+
+        this.view = new View();
 
         listeners = new ArrayList<LoginListener>();
 

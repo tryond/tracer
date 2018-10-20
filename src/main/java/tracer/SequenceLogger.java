@@ -34,17 +34,10 @@ public class SequenceLogger implements LoginListener, CursorSelectListener
         userModel = new UserTable(database);
 
         // Login controller for use with acquiring valid username
-        // TODO: import login controller
-
-
-        view = new View();
-        login = new LoginController(userModel, view);
-
+        login = new LoginController(userModel);
         login.addListener(this);
 
-
         // Cursor selector for use with selecting a valid cursor type
-        // TODO: import cursor selector
          cursorSelector = new CursorSelectController();
          cursorSelector.addListener(this);
 
