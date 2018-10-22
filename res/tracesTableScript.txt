@@ -1,0 +1,13 @@
+CREATE TABLE traces
+(
+username varchar(20) not null,
+id serial PRIMARY KEY not null,
+date date not null,
+points path not null,
+sequence_id varchar(10) not null,
+position smallint not null,
+round smallint not null,
+attempt smallint not null,
+cursor_type cursor_type not null,
+poll_rate real not null
+);
