@@ -3,7 +3,7 @@
 
 # Tracer
 
-Tracer us a desktop application which tracks users' mouse behaviors through a series of button presses.
+Tracer is a desktop application which tracks users' mouse behaviors through a series of button presses.
 
 ## Description
 
@@ -21,28 +21,20 @@ Download 'tracer.jar' release found [here](https://github.com/tryond/tracer/rele
 
 ### Usage
 
-1. Login/Register
-
+1. **Login/Register**
 Tracer requires that the user is logged in to ensure that the behavior collected is mapped to the correct user.
-
 ![Alt text](res/tracer_images/login.png?raw=true "Login Screen")
-
 ![Alt text](res/tracer_images/register.png?raw=true "Register Screen")
 
-2. Mouse Type Selection
-
+2. **Mouse Type Selection**
 ![Alt text](res/tracer_images/mouse.png?raw=true "Mouse Type Selection Screen")
 
-3. Starting Sequence
-
+3. **Starting Sequence**
 ![Alt text](res/tracer_images/start.png?raw=true "Login Screen")
-
 ![Alt text](res/tracer_images/distraction1.png?raw=true "Login Screen")
-
 ![Alt text](res/tracer_images/distraction2.png?raw=true "Login Screen")
 
-4. Results
-
+4. **Results**
 ![Alt text](res/tracer_images/results.png?raw=true "Login Screen")
 
 ## Author
