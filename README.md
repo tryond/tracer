@@ -3,7 +3,7 @@
 
 # Tracer
 
-Tracer is a desktop application which tracks users' mouse behaviors through a series of button presses.
+Tracer is a desktop application which tracks users' mouse behaviors through a series of button clicks.
 
 ## Description
 
@@ -19,32 +19,30 @@ Tracer is being developed alongside a suite of human-computer interaction resear
 
 Download 'tracer.jar' release found [here](https://github.com/tryond/tracer/releases).
 
-### Usage
-
-1. **Login/Register**
+### Login/Register
 
 Tracer requires that the user is logged in to ensure that the behavior collected is mapped to the correct user. If you are a first time user, please register with the application.
 
-**Note: Please do not change users during a single session. Log out and log back in as another user. This is crucial to the integrity of the data collected.**:+1:
+**Note: Please do not change users during a single session. Log out and log back in as another user. This is crucial to the integrity of the data collected.**. :+1:
 
 ![Login Image](res/tracer_images/login.png?raw=true "Image that shows login screen")
 ![Register Image](res/tracer_images/register.png?raw=true "Image that shows registration screen")
 
-2. **Mouse Type Selection**
+### Mouse Type Selection 
 
 Mouse type selection asks the user to choose between a standard mouse and a trackpad (mainly found on laptops). 
 
-**Note: Please use the mouse type selected for the duration of your use with the application. This is crucial to the integrity of the data collected.**:+1:
+**Note: Please use the mouse type selected for the duration of your use with the application. This is crucial to the integrity of the data collected.**. :+1:
 
 ![Mouse Select Image](res/tracer_images/mouse.png?raw=true "Image that shows mouse type selection")
 
-3. **Starting Sequence**
+### Starting Sequence
 
 The sequence starts when the user clicks on the first target. The colored shapes are distractions meant to mimic real-world computer usage. 
 
 ![Sequence gif](res/tracer_images/animation.gif?raw=true "Animation that shows a typical sequence and results")
 
-4. **Results**
+### Results
 
 The results are displayed on-screen once the user finishes the sequence. The sequence id is shown in the bottom right-hand corner of the application window. This sequence code can be saved in order to recreate the sequence in the future. 
 
